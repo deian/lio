@@ -61,7 +61,7 @@ newLIORefP p l a = do
 -- label of the reference is below the current clearance. Moreover,
 -- the current label is raised to the join of the current label and
 -- the reference label. To avoid failures (introduced by the 'taint'
----guard) use 'labelOf' to check that a read will succeed.
+-- guard) use 'labelOf' to check that a read will succeed.
 readLIORef :: MonadLIO l m => LIORef l a -> m a
 readLIORef = readLIORefP NoPrivs
 

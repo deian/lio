@@ -102,6 +102,8 @@ Library
     -- * Labeled IORefs
     LIO.LIORef
     LIO.LIORef.TCB
+    -- * Weak labeled IORefs
+    LIO.WeakLIORef
     -- * Gates
     LIO.Gate
     -- * LIO privileges
