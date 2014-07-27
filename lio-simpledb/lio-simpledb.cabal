@@ -1,0 +1,46 @@
+Name:           lio-simpledb
+Version:        0.0.0.1
+Cabal-Version:  >= 1.8
+Build-type:     Simple
+License:        GPL
+License-File:   LICENSE
+Author:         Hails team
+Maintainer:	Hails team <hails at scs dot stanford dot edu>
+Synopsis:       LIO support for a simple labeled object store
+Category:       Security
+Stability:      Experimental
+Description:
+
+  This library provides a simple database interface, similar to that
+  of Hails, but with side-effecting policies and arbitrary back ends.
+
+
+Extra-source-files:
+  examples/trivial.hs
+
+Source-repository head
+  Type:     git
+  Location: git://github.com/scslab/lio.git
+
+Library
+  Build-Depends:
+    base          >= 4.5     && < 5.0
+   ,containers
+   ,bytestring
+   ,filepath
+   ,directory
+   ,hashable
+   ,lio
+   ,lio-fs        >= 0.0.2
+   ,uuid          >= 1.3.3
+
+  GHC-options: -Wall -fno-warn-orphans
+
+  Exposed-modules:
+    -- * UUID support
+    LIO.Data.UUID.V1
+    LIO.Data.UUID.V4
+    -- * SimpleDB interface
+    LIO.DB.Simple
+    -- * SimpleDB backed by filesystem
+    LIO.DB.Simple.FS
